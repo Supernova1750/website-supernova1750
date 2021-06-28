@@ -61,11 +61,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     mysqli_close($link);
-}
-
-if($_POST['username'] == $usr && hash('sha256', $_POST['password']) == $pwd) {
-  echo 'correct';
-} else {
-  echo 'no, try again';
+    echo login_err;
 }
 ?>
