@@ -61,6 +61,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     mysqli_close($link);
-    echo login_err;
+    echo $login_err;
 }
 ?>
