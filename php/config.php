@@ -18,20 +18,4 @@ $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-$usr1 = 'supernova';
-
-$sql = 'SELECT id FROM users WHERE username = ?';
-$stmt = mysqli_prepare($link, $sql);
-echo 'test1' . '<br>';
-if($stmt = mysqli_prepare($link, $sql)) {
-    mysqli_stmt_bind_param($stmt, 's', $usr1);
-
-    mysqli_stmt_execute($stmt);
-
-    mysqli_stmt_bind_result($stmt, $id);
-
-    mysqli_stmt_fetch($stmt);
-
-    printf('Id for user %s: %s', $usr1, $id);
-}
 ?>
