@@ -31,15 +31,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             mysqli_stmt_bind_param($stmt, 's', $param_usr);
 
             $param_usr = $usr;
-            echo 'test before sql execution' . '<br>';
             if(mysqli_stmt_execute($stmt)) {
                 mysqli_stmt_store_result($stmt);
-                echo 'test before username check' . '<br>';
                 if(mysqli_stmt_num_rows($stmt) == 1) {
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-                    echo 'test before fetch' . '<br>';
                     if(mysqli_stmt_fetch($stmt)){
-                        echo 'test before password check' . '<br>';
                         if(password_verify($pwd, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
@@ -47,7 +43,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            echo "logged in";
                             header('location: ../welcome');
                         } else {
                             $login_err = 'Invalid username or password!';
@@ -64,7 +59,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
        echo $login_err;
     }
     mysqli_close($link);
-    echo 'idk what happened';
-    echo 'test';
 }
 ?>
