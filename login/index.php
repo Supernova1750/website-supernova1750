@@ -10,7 +10,6 @@ require_once '../php/authenticate.php'
     <title>Login</title>
     <link rel="icon" href="../assets/logo.png">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../themes/darkly/bootstrap.min.css">
     <script src="../js/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
