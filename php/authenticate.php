@@ -43,7 +43,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            header('location: ../welcome');
+                            header('location: ../welcome');e
+                            exit;
                         } else {
                             $login_err = 'Invalid username or password!';
                         }
@@ -56,8 +57,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             mysqli_stmt_close($stmt);
         }
     } else {
-       echo $login_err;
+       echo $pwd_err;
     }
     mysqli_close($link);
+
 }
 ?>
