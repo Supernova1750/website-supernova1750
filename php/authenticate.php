@@ -9,8 +9,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 require_once 'config.php';
 
 $usr = $pwd = '';
-$usr_err = $pwd_err = '';
-$login_err = 'test';
+$usr_err = $pwd_err = $login_err = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty(trim($_POST['username']))) {
