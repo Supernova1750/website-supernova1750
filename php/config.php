@@ -16,6 +16,7 @@ if($link === false){
 
 $sql = 'SELECT id, username, password, FROM users WHERE username = ?';
 $stmt = mysqli_prepare($link, $sql);
+echo 'test1' . '<br>';
 if($stmt) {
     echo 'test';
 }
