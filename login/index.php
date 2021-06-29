@@ -1,4 +1,5 @@
 <?php
+session_destory();
 echo '<script>alert("Welcome to Geeks for Geeks")</script>';
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: ../welcome");
