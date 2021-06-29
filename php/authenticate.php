@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo 'test before fetch' . '<br>';
                     if(mysqli_stmt_fetch($stmt)){
                         echo 'test before password check' . '<br>';
-                        if(password_verify($password, $hashed_password)){
+                        if(password_verify($pwd, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
                             // Store data in session variables
