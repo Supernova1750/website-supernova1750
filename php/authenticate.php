@@ -56,8 +56,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             mysqli_stmt_close($stmt);
         }
     } else {
-       echo $pwd_err;
+       echo $pwd_err . '<br>';
     }
+    echo $login_err;
     mysqli_close($link);
 
 }
