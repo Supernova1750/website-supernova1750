@@ -28,7 +28,7 @@ require '../php/authenticate.php'
       </div>
     </div>
     <div class="center">
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      <form action="index.php" method="post">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
