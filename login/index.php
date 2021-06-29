@@ -43,7 +43,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         </div>
             <?php require '../php/authenticate.php';
                 if(!empty($login_err)) {
-                    echo '<div class="form-group valid-feedback"><p class="text-right">' . $login_err . '</p></div>';
+                    echo '<div class="form-group error-message"><p class="text-right">' . $login_err . '</p></div>';
                 }
             ?>
         <div class="form-button" style="float: right;">
