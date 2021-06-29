@@ -15,7 +15,7 @@ define('DB_NAME', 'website');
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
 // Check connection
-if($link === false){
+if($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 $usr1 = 'supernova';
@@ -23,7 +23,7 @@ $usr1 = 'supernova';
 $sql = 'SELECT id FROM users WHERE username = ?';
 $stmt = mysqli_prepare($link, $sql);
 echo 'test1' . '<br>';
-if($stmt = mysqli_prepare($link, $sql) {
+if($stmt = mysqli_prepare($link, $sql)) {
      print('test\n');
     mysqli_stmt_bind_param($stmt, 's', $usr1);
 
