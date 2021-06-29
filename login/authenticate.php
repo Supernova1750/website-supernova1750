@@ -19,9 +19,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if(empty(trim($_POST['password']))) {
-        $usr_err = 'Please enter password';
+        $pwd_err = 'Please enter password';
     } else {
-        $usr = trim($_POST['password']);
+        $pwd = trim($_POST['password']);
     }
 
     if(empty($usr_err) && empty($pwd_err)) {
