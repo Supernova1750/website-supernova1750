@@ -42,7 +42,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
           <label for="password">Password</label>
           <input type="password" class="form-control" name="password" id="password" placeholder="Password">
         </div>
-        <span class="invalid-feedback"><?php echo 'test'; ?></span>
+        <span class="invalid-feedback"><?php require '../php/authenticate.php'; echo $login_err; ?></span>
+
         <div class="form-button">
           <button type="submit" class="btn btn-secondary">Submit</button>
         </div>
