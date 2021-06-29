@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if(empty($usr_err) && empty($pwd_err)) {
-        $sql = 'SELECT id, username, password, FROM users WHERE username = ?';
+        $sql = 'SELECT id, username, password FROM users WHERE username = ?';
         $stmt = mysqli_prepare($link, $sql);
         if($stmt) {
             mysqli_stmt_bind_param($stmt, 's', $param_usr);
