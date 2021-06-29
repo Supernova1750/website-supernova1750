@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             mysqli_stmt_bind_param($stmt, 's', $param_usr);
 
             $param_usr = $username;
-
+            echo 'test before sql execution' . '<br>';
             if(mysqli_stmt_execute($stmt)) {
                 mysqli_stmt_store_result($stmt);
                 echo 'test before username check' . '<br>';
