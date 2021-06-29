@@ -35,11 +35,11 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       <form action="../php/authenticate.php" method="post">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username">
+          <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
         </div>
             <?php require '../php/authenticate.php';
                 if(!empty($login_err)) {
