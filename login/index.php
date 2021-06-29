@@ -41,12 +41,12 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
           <label for="password">Password</label>
           <input type="password" class="form-control" name="password" id="password" placeholder="Password">
         </div>
-        <div class="form-group invalid-feedback">
-            <p class="">
-                <?php require_once '../php/authenticate.php'; echo $login_err; ?>
-            </p>
-        </div>
-        <div class="form-button">
+            <?php require_once '../php/authenticate.php';
+                if(empty($login_err)) {
+                    echo '<div class="form-group valid-feedback"><p class="text-right">' . $login_err . '</p></div>';
+                }
+            ?>
+        <div class="form-button" style="float: right;">
           <button type="submit" class="btn btn-secondary">Submit</button>
         </div>
       </form>
