@@ -45,8 +45,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             <p class="">
                 <?php require_once '../php/authenticate.php'; echo $login_err; ?>
             </p>
-        </span>
-
+        </div>
         <div class="form-button">
           <button type="submit" class="btn btn-secondary">Submit</button>
         </div>
