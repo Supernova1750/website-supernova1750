@@ -14,9 +14,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     <link rel="icon" href="../assets/logo.png">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../themes/darkly/bootstrap.min.css">
-    <script src="../js/popper.min.js">
-
-    </script>
+    <script src="../js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="script.js"></script>
