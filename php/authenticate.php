@@ -59,6 +59,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
        echo $pwd_err . '<br>';
     }
     mysqli_close($link);
-    header('location: ../login');
 }
 ?>
