@@ -1,5 +1,6 @@
 <?php
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    echo '<script>alert("Welcome to Geeks for Geeks")</script>';
     header("location: ../welcome");
     exit;
 }
