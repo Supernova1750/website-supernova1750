@@ -24,7 +24,7 @@ $sql = 'SELECT id FROM users WHERE username = ?';
 $stmt = mysqli_prepare($link, $sql);
 echo 'test1' . '<br>';
 if($stmt = mysqli_prepare($link, $sql) {
-    echo 'test';
+     print('test\n');
     mysqli_stmt_bind_param($stmt, 's', $usr1);
 
     mysqli_stmt_bind_result($stmt, $id);
