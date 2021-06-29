@@ -24,6 +24,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pwd = trim($_POST['password']);
     }
 
+    echo $usr . '\r\n' . $pwd . '<br>';
+
     if(empty($usr_err) && empty($pwd_err)) {
         $sql = 'SELECT id, username, password, FROM users WHERE username = ?';
 
