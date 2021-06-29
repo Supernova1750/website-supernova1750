@@ -34,7 +34,7 @@
           <label for="password">Password</label>
           <input type="password" class="form-control" name="password" id="password" placeholder="Password">
         </div>
-        <span class="invalid-feedback"><?php echo $login_err; ?></span>
+        <span class="invalid-feedback"><?php include '../php/authenticate'; echo $login_err; ?></span>
         <div class="form-button">
           <button type="submit" class="btn btn-secondary">Submit</button>
         </div>
