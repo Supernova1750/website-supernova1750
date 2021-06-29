@@ -1,10 +1,10 @@
 <?php
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    header('/welcome');
+    header('location: /welcome');
     echo 'testloggedin';
     exit;
 } else {
-    header('/login');
+    header('location: /login');
     echo 'testnotloggedin';
     exit;
 }
