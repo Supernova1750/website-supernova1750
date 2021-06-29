@@ -24,12 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pwd = trim($_POST['password']);
     }
 
-    echo $usr_err . '<br>' . $pwd_err . '<br>';
     if(empty($usr_err) && empty($pwd_err)) {
-        echo $usr . '<br>' . $pwd . '<br>';
         $sql = 'SELECT id, username, password, FROM users WHERE username = ?';
         $stmt = mysqli_prepare($link, $sql);
-        echo $usr . '<br>' . $pwd . '<br>';
         if($stmt) {
             mysqli_stmt_bind_param($stmt, 's', $param_usr);
 
