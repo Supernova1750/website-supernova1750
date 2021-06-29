@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            header('location: ../welcome');
+                            header('location: ../homepage');
                         } else {
                             $login_err = 'Invalid username or password!';
                         }
