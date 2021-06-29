@@ -16,11 +16,18 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 $usr = 'supernova';
-$sql = 'SELECT id, username, password FROM users WHERE username = ?';
+
+$sql = 'SELECT id FROM users WHERE username = ?';
 $stmt = mysqli_prepare($link, $sql);
 echo 'test1' . '<br>';
 if($stmt = mysqli_prepare($link, $sql) {
     echo 'test';
     mysqli_stmt_bind_param($stmt, 's', $usr);
+
+    mysqli_stmt_bind_result($stmt, $id);
+
+    mysqli_stmt_fetch($stmt);
+
+    printf('Id for user %s: %s', $usr, $id);
 }
 ?>
