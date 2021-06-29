@@ -28,7 +28,7 @@ require_once '../php/authenticate.php'
       </div>
     </div>
     <div class="center">
-      <form action="index" method="post">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
