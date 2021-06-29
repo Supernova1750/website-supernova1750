@@ -58,8 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
        echo $pwd_err . '<br>';
     }
-    echo $login_err;
     mysqli_close($link);
-
+    header('location: ../login');
 }
 ?>
