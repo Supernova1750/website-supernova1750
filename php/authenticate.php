@@ -6,7 +6,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   exit;
 }
 
-require_once '../php/config.php';
+require_once 'config.php';
 
 $usr = $pwd = '';
 $usr_err = $pwd_err = $login_err = '';
