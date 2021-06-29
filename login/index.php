@@ -1,8 +1,5 @@
 <?php
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../welcome");
-    exit;
-}
+require '../php/authenticate.php'
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +28,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       </div>
     </div>
     <div class="center">
-      <form action="../php/authenticate.php" method="post">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
@@ -40,7 +37,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
           <label for="password">Password</label>
           <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
         </div>
-            <?php require '../php/authenticate.php';
+            <?php
                 if(!empty($login_err)) {
                     echo '<div class="form-group error-message"><p style="text-align: right; margin-bottom:unset; color:#e87878;">' . $login_err . '</p></div>';
                 }
