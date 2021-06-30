@@ -31,14 +31,9 @@ require_once '../php/authenticate.php'
     <div class="center">
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
-          <label for="username">Username</label>
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">@</span>
-          </div>
           <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
           <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
         </div>
             <?php
