@@ -22,12 +22,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else if($stmt = mysqli_prepare($link,'SELECT id FROM users WHERE username = ?')) {
         mysqli_stmt_bind_param($stmt, 's', $param_usr);
         $param_usr = $usr;
+        $reg_err = 'test1';
         if(mysqli_stmt_execute($stmt)) {
+            $reg_err = 'test2';
             mysqli_stmt_store_result($stmt);
             if(mysqli_stmt_num_rows($stmt) >= 1) {
                 $reg_err = 'Username is already taken';
             } else {
+                $reg_err = 'test3';
                 if($stmt = mysqli_prepare(link, 'INSERT INTO users (username, password) VALUES (?,?)')) {
+                    $reg_err = 'test4';
                     mysqli_stmt_bind_param($stmt, 'ss', $param_usr, $param_pwd);
                     $param_usr = $usr;
                     $param_pwd  = password_hash($pwd, PASSWORD_DEFAULT);
@@ -41,7 +45,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_stmt_close($stmt);
     }
-    $reg_err = 'SQL error. Please contact server admin';
 }
 
 ?>
