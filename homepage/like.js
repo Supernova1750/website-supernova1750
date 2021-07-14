@@ -1,4 +1,4 @@
-'use strict';
+import React, { useState } from "react";
 
 const e = React.createElement;
 
@@ -21,4 +21,4 @@ class LikeButton extends React.Component {
     }
 }
 const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(e(LikeButton), domContainer);
+React.render(e(LikeButton), domContainer);
