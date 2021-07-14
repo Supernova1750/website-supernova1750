@@ -6,10 +6,14 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   exit;
 }
 
-include 'php/config.php';
+include '../php/config.php';
 
 $usr = $pwd = '';
 $usr_err = $pwd_err = $login_err = '';
+
+if(empty($link)) {
+    $link = '';
+}
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty(trim($_POST['username']))) {
@@ -24,9 +28,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pwd = trim($_POST['password']);
     }
 
-    if(empty($usr_err) && empty($pwd_err)) {
+    if((empty($usr_err) && empty($pwd_err)) || $link != false) {
         $sql = 'SELECT id, username, password FROM users WHERE username = ?';
-        $stmt = mysqli_prepare(link, $sql);
+        $stmt = mysqli_prepare($link, $sql);
         if($stmt) {
             mysqli_stmt_bind_param($stmt, 's', $param_usr);
 
@@ -58,6 +62,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
        echo $pwd_err . '<br>';
     }
-    mysqli_close(link);
+    mysqli_close($link);
 }
 ?>

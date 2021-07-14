@@ -3,6 +3,10 @@ include '../php/config.php';
 
 $reg_err = '';
 
+if(empty($link)) {
+    $link = '';
+}
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usr = trim($_POST['username']);
     $pwd = trim($_POST['password']);
@@ -15,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $reg_err = 'Passwords do not match.';
     } else if(empty($pwd) ||  strlen($pwd) < 7) {
         $reg_err = 'Password has to be at least 8 characters long';
-    } else if($stmt = mysqli_prepare(link,'SELECT id FROM users WHERE username = ?')) {
+    } else if($stmt = mysqli_prepare($link,'SELECT id FROM users WHERE username = ?')) {
         mysqli_stmt_bind_param($stmt, 's', $param_usr);
         $param_usr = $usr;
         if(mysqli_stmt_execute($stmt)) {
