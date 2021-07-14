@@ -1,5 +1,9 @@
 <?php
-    require_once '../php/authenticate.php'
+if(!isset($_SESSION["loggedin"])) {
+    header("Location: ../login");
+    exit;
+}
+
 ?>
 
 <html lang="en">
