@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $reg_err = 'Username is already taken';
             } else {
                 $reg_err = 'test3';
-                if($stmt = mysqli_prepare(link, 'INSERT INTO users (username, password) VALUES (?,?)')) {
+                if($stmt = mysqli_prepare($link, 'INSERT INTO users (username, password) VALUES (?,?)')) {
                     $reg_err = 'test4';
                     mysqli_stmt_bind_param($stmt, 'ss', $param_usr, $param_pwd);
                     $param_usr = $usr;
