@@ -58,6 +58,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
        echo $pwd_err . '<br>';
     }
-    mysqli_close($link);
+    mysqli_close(link);
 }
 ?>

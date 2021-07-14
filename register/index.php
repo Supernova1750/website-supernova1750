@@ -1,5 +1,5 @@
 <?php
-
+    require_once 'php/register.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
 
   </head>
@@ -40,8 +39,8 @@
           <input type="password" class="form-control" name="password-repeat" id="password-repeat" placeholder="Repeat password" required>
         </div>
             <?php
-                if(trim($_POST['password']) != trim($_POST['password-repeat'])) {
-                    echo '<div class="form-group error-message"><p style="text-align: right; margin-bottom:unset; color:#e87878;">Passwords do not match.</p></div>';
+                if(!empty($reg_err)) {
+                    echo '<div class="form-group error-message"><p style="text-align: right; margin-bottom:unset; color:#e87878;">' . $reg_err . '</p></div>';
                 }
             ?>
         <div class="form-button" style="float: right;">
