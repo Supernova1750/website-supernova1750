@@ -28,6 +28,9 @@ require_once '../php/authenticate.php'
         </div>
       </div>
     </div>
+
+    <a href="../register">register now</a>
+
     <div class="center">
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
