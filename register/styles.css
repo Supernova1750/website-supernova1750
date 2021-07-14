@@ -1,0 +1,25 @@
+body {
+  overflow-x: hidden;
+}
+
+.site-heading {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form-group {
+  padding-bottom: 10px;
+}
+
+.form-button {
+  padding-top: 10px;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
