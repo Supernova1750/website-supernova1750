@@ -1,5 +1,5 @@
 <?php
-    require_once 'php/authenticate.php'
+    require_once '../php/authenticate.php'
 ?>
 
 <html lang="en">
