@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $param_usr = $usr;
                     $param_pwd  = password_hash($pwd, PASSWORD_DEFAULT);
                     if(mysqli_stmt_execute($stmt)) {
-                        header("location: ../login");
+                        header("Location: /login");
                     }
                     mysqli_stmt_close($stmt);
                 }

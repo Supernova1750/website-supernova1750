@@ -1,3 +1,7 @@
+<?php
+    require_once 'php/authenticate.php'
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
