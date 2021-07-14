@@ -1,5 +1,5 @@
 <?php
-    require_once 'php/register.php';
+    require_once '../php/register.php';
 ?>
 
 <!DOCTYPE html>
