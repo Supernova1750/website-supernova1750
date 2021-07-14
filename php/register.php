@@ -1,5 +1,5 @@
 <?php
-include 'php/config.php';
+include '../php/config.php';
 
 $reg_err = '';
 
@@ -29,8 +29,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $param_pwd  = password_hash($pwd, PASSWORD_DEFAULT);
                     if(mysqli_stmt_execute($stmt)) {
                         header("location: ../login");
-                    } else {
-                        $reg_err = 'SQL error. Please contact server admin';
                     }
                     mysqli_stmt_close($stmt);
                 }
@@ -39,6 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_stmt_close($stmt);
     }
+    $reg_err = 'SQL error. Please contact server admin';
 }
 
 ?>
