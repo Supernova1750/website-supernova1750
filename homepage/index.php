@@ -29,6 +29,7 @@ include "../php/config.php";
 <body>
 <h1 class="header">Hello <?php echo $_SESSION["username"]?></h1>
 <span>please be nice to everyone</span>
+<a href="https://nsfw.supernova1750.dev">no-no zone</a>
 </body>
 </html>
 
