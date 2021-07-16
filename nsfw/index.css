@@ -1,8 +1,10 @@
 .bg {
     background-color: #f5e79e;
 }
-
 .tiddies {
-    color: #0c1f4c;
-    font-family: Papyrus, fantasy;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
