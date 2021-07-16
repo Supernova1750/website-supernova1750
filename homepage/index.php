@@ -27,7 +27,8 @@ include "../php/config.php";
     <script src="index.js"></script>
 </head>
 <body>
-<h1 class="header"><?php echo $_SESSION["username"]?></h1>
+<h1 class="header">Hello <?php echo $_SESSION["username"]?></h1>
+<span>please be nice to everyone</span>
 </body>
 </html>
 
