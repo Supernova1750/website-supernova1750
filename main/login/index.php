@@ -8,13 +8,13 @@ require_once '../php/authenticate.php'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="icon" href="../assets/logo.png">
+    <link rel="icon" href="../../assets/logo.png">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../bootstrap/themes/darkly/bootstrap.min.css">
-    <script src="../bootstrap/js/popper.min.js"></script>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/themes/darkly/bootstrap.min.css">
+    <script src="../../bootstrap/js/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
