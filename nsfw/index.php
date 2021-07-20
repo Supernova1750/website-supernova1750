@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("Location: https://supernova.dev/login");
+    die;
+}
+?>
+
 <html lang="en">
     <head>
         <meta charset="utf-8"/>

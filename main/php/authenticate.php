@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   header("Location: /homepage");
-  exit;
+  die;
 }
 
 include '../php/config.php';
