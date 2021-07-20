@@ -1,9 +1,8 @@
 <?php
 session_start();
-
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("Location: https://supernova.dev/login");
-    die;
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == false) {
+    header("Location: ../login");
+    die();
 }
 ?>
 
