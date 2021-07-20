@@ -29,7 +29,7 @@ require_once '../php/authenticate.php'
       </div>
     </div>
 
-    <a href="../register">register now</a>
+
 
     <div class="center">
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -48,6 +48,7 @@ require_once '../php/authenticate.php'
           <button type="submit" class="btn btn-secondary">Submit</button>
         </div>
       </form>
+      <a href="../register">register now</a>
     </div>
   </body>
 </html>
