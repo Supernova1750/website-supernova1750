@@ -1,10 +1,23 @@
+@keyframes tiddieJiggle {
+    from {
+        top: 50%;
+        left: 50.5%;
+    }
+    to {
+        top: 50%;
+        left: 49.5%;
+    }
+}
+
 .bg {
     background-color: #f5e79e;
 }
+
 .tiddies {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    animation-name: tiddieJiggle;
+    animation-duration: 200ms;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
