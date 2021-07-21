@@ -3,7 +3,7 @@ session_start();
 #if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == false) {
  #   header("Location: https://supernova1750.dev/login");
 #    die();
-}
+#}
 ?>
 
 <html lang="en">
