@@ -1,0 +1,10 @@
+<?php
+?>
+<html>
+<head>
+    <title>Console</title>
+</head>
+<body>
+    Console
+</body>
+</html>
